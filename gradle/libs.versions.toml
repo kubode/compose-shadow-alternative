@@ -2,8 +2,10 @@
 kotlin = "1.9.20"
 compose-multiplatform = "1.5.10"
 android-gradle-plugin = "8.1.2"
+androidx-activity = "1.8.0"
 
 [libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
