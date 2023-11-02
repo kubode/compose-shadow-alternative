@@ -4,9 +4,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 
-public expect fun Modifier.dropShadow(
+public actual fun Modifier.dropShadow(
     color: Color,
     dx: Dp,
     dy: Dp,
-    radius: Dp,
-): Modifier
+    radius: Dp
+): Modifier = this

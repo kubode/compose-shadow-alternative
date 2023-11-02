@@ -27,4 +27,7 @@ kotlin {
 android {
     namespace = "com.github.kubode.compose.dropshadow"
     compileSdk = 34
+    defaultConfig {
+        minSdk = 21
+    }
 }
