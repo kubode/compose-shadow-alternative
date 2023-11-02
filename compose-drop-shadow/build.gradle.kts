@@ -5,13 +5,24 @@ plugins {
 }
 
 kotlin {
+    jvmToolchain(19)
+
     jvm()
     androidTarget()
     iosArm64()
     iosX64()
     iosSimulatorArm64()
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation(compose.ui)
+            }
+        }
+    }
 }
 
 android {
     namespace = "com.github.kubode.compose.dropshadow"
+    compileSdk = 34
 }
