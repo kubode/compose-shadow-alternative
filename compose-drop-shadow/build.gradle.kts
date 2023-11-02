@@ -13,6 +13,8 @@ kotlin {
     iosX64()
     iosSimulatorArm64()
 
+    explicitApi()
+
     sourceSets {
         commonMain {
             dependencies {
