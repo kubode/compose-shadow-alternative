@@ -10,3 +10,5 @@ plugins {
 }
 
 rootProject.name = "compose-drop-shadow-root"
+
+include(":compose-drop-shadow")
