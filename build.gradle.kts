@@ -12,4 +12,7 @@ allprojects {
         google()
         mavenCentral()
     }
+
+    group = "com.github.kubode.compose.dropshadow"
+    version = "0.0.0-SNAPSHOT"
 }
