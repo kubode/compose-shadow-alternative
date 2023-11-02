@@ -14,6 +14,7 @@ kotlin {
             dependencies {
                 implementation(project(":compose-drop-shadow"))
                 implementation(libs.androidx.activity.compose)
+                implementation(compose.material)
                 implementation(compose.foundation)
                 implementation(compose.ui)
                 implementation(compose.uiTooling)
