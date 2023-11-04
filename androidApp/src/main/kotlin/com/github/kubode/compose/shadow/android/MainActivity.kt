@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.github.kubode.compose.dropshadow.DropShadow
@@ -47,8 +48,7 @@ class MainActivity : ComponentActivity() {
             ) {
                 DropShadow(
                     color = Color.Black.copy(alpha = 0.5f),
-                    dx = 2.dp,
-                    dy = 2.dp,
+                    offset = DpOffset(2.dp, 2.dp),
                     radius = 2.dp,
                 ) {
                     BasicText(
@@ -58,8 +58,7 @@ class MainActivity : ComponentActivity() {
                 }
                 DropShadow(
                     color = DroidColor.copy(alpha = 0.5f),
-                    dx = 4.dp,
-                    dy = 4.dp,
+                    offset = DpOffset(4.dp, 4.dp),
                     radius = 8.dp,
                 ) {
                     Image(
@@ -80,8 +79,7 @@ class MainActivity : ComponentActivity() {
                 )
                 DropShadow(
                     color = DroidColor.copy(alpha = 0.5f),
-                    dx = 4.dp,
-                    dy = 4.dp,
+                    offset = DpOffset(4.dp, 4.dp),
                     radius = 8.dp,
                     drawInvalidationTrigger = { degrees },
                 ) {

@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.layout.onPlaced
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.IntSize
 
 /**
@@ -38,8 +39,7 @@ import androidx.compose.ui.unit.IntSize
  * For example, button indicators and over-scrolling in the content will not work correctly.
  *
  * @param color The color of the shadow.
- * @param dx The horizontal offset of the shadow.
- * @param dy The vertical offset of the shadow.
+ * @param offset The offset of the shadow.
  * @param radius The blur radius of the shadow.
  * @param edgeTreatment The edge treatment of the shadow.
  * @param modifier The modifier to apply to this layout node.
@@ -59,8 +59,7 @@ import androidx.compose.ui.unit.IntSize
 @Composable
 public fun DropShadow(
     color: Color,
-    dx: Dp,
-    dy: Dp,
+    offset: DpOffset,
     radius: Dp,
     modifier: Modifier = Modifier,
     edgeTreatment: BlurredEdgeTreatment = BlurredEdgeTreatment.Unbounded,
@@ -74,8 +73,7 @@ public fun DropShadow(
         DropShadowEffect(
             state = state,
             color = color,
-            dx = dx,
-            dy = dy,
+            offset = offset,
             radius = radius,
             edgeTreatment = edgeTreatment,
             drawInvalidationTrigger = drawInvalidationTrigger,
@@ -134,8 +132,7 @@ private fun DropShadowContent(
 private fun DropShadowEffect(
     state: DropShadowState,
     color: Color,
-    dx: Dp,
-    dy: Dp,
+    offset: DpOffset,
     radius: Dp,
     edgeTreatment: BlurredEdgeTreatment,
     drawInvalidationTrigger: () -> Any?,
@@ -159,8 +156,8 @@ private fun DropShadowEffect(
         debug { "Draw - shadow" }
         drawInvalidationTrigger()
         translate(
-            left = with(density) { dx.toPx() },
-            top = with(density) { dy.toPx() },
+            left = with(density) { offset.x.toPx() },
+            top = with(density) { offset.y.toPx() },
         ) {
             drawImage(
                 image = bitmap,
