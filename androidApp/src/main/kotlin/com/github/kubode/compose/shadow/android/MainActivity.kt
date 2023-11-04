@@ -10,6 +10,7 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
@@ -56,6 +57,9 @@ class MainActivity : ComponentActivity() {
                     color = Color.Black.copy(alpha = 0.5f),
                     offset = DpOffset(2.dp, 2.dp),
                     radius = 2.dp,
+                    modifier = Modifier
+                        .border(1.dp, Color.Black)
+                        .padding(16.dp),
                 ) {
                     BasicText(
                         text = buildAnnotatedString {
