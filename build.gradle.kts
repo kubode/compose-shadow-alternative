@@ -12,6 +12,6 @@ allprojects {
         mavenCentral()
     }
 
-    group = "com.github.kubode.compose.dropshadow"
-    version = "0.0.0-SNAPSHOT"
+    group = "com.github.kubode.compose.shadow"
+    version = "0.0.1-SNAPSHOT"
 }
