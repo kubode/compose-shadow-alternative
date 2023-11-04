@@ -170,7 +170,7 @@ private fun DropShadowEffect(
     }
 }
 
-private const val DEBUG = true
+private const val DEBUG = false
 private inline fun debug(message: () -> String) {
     if (DEBUG) {
         println(message())

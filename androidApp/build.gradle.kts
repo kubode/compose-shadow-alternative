@@ -1,37 +1,35 @@
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.application)
 }
 
 kotlin {
     jvmToolchain(19)
-
-    androidTarget()
-
-    sourceSets {
-        androidMain {
-            dependencies {
-                implementation(project(":compose-dropshadow"))
-                implementation(libs.androidx.activity.compose)
-                implementation(compose.material)
-                implementation(compose.foundation)
-                implementation(compose.ui)
-                implementation(compose.uiTooling)
-                implementation(compose.preview)
-            }
-        }
-    }
 }
 
 android {
-    namespace = "com.github.kubode.compose.dropshadow.android"
+    namespace = "com.github.kubode.compose.shadow.android"
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.github.kubode.compose.dropshadow.android"
+        applicationId = "com.github.kubode.compose.shadow.android"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
+    buildFeatures {
+        compose = true
+        composeOptions {
+            kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
+        }
+    }
+}
+
+dependencies {
+//    implementation(project(":compose-boxshadow"))
+    implementation(project(":compose-dropshadow"))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.tooling.preview)
 }
