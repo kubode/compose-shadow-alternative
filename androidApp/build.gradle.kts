@@ -12,7 +12,7 @@ kotlin {
     sourceSets {
         androidMain {
             dependencies {
-                implementation(project(":compose-drop-shadow"))
+                implementation(project(":compose-dropshadow"))
                 implementation(libs.androidx.activity.compose)
                 implementation(compose.material)
                 implementation(compose.foundation)

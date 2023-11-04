@@ -13,5 +13,5 @@ plugins {
 rootProject.name = "compose-shadow-alternative"
 
 include(":androidApp")
-include(":compose-box-shadow")
-include(":compose-drop-shadow")
+include(":compose-boxshadow")
+include(":compose-dropshadow")
