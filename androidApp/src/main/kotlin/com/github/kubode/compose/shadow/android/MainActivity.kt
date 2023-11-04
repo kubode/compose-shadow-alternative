@@ -27,7 +27,10 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -55,8 +58,20 @@ class MainActivity : ComponentActivity() {
                     radius = 2.dp,
                 ) {
                     BasicText(
-                        text = "Compose DropShadow",
-                        style = TextStyle.Default.copy(fontSize = 32.sp)
+                        text = buildAnnotatedString {
+                            withStyle(SpanStyle(color = Color(0xFF37BF6E))) {
+                                append("Compose")
+                            }
+                            append(" ")
+                            withStyle(SpanStyle(color = Color(0xFF041619))) {
+                                append("Shadow")
+                            }
+                            append(" ")
+                            withStyle(SpanStyle(color = Color(0xFF3870B2))) {
+                                append("Alternative")
+                            }
+                        },
+                        style = TextStyle.Default.copy(fontSize = 24.sp)
                     )
                 }
                 DropShadow(
