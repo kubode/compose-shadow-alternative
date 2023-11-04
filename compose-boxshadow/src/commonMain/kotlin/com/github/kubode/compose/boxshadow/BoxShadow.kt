@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.DpOffset
 /**
  * Modifier to apply a box shadow.
  *
+ * This modifier applies box shadow and [clip] according to [shape].
+ *
  * @param color The color of the shadow.
  * @param offset The offset of the shadow.
  * @param radius The blur radius of the shadow.
