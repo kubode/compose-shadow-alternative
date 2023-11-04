@@ -25,7 +25,9 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.github.kubode.compose.dropshadow.DropShadow
 
 class MainActivity : ComponentActivity() {
@@ -49,7 +51,10 @@ class MainActivity : ComponentActivity() {
                     dy = 2.dp,
                     radius = 2.dp,
                 ) {
-                    BasicText(text = "DropShadow")
+                    BasicText(
+                        text = "Compose DropShadow",
+                        style = TextStyle.Default.copy(fontSize = 32.sp)
+                    )
                 }
                 DropShadow(
                     color = DroidColor.copy(alpha = 0.5f),
