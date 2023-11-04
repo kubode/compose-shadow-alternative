@@ -1,4 +1,4 @@
-package com.github.kubode.compose
+package com.github.kubode.compose.boxshadow
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
