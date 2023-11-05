@@ -7,11 +7,6 @@ plugins {
 }
 
 allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
     group = "com.github.kubode.compose.shadow"
     version = "0.0.1-SNAPSHOT"
 }
