@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "schedule:daily",
+  ],
+  // Add `dependencies` label to PR.
+  "labels": [
+    "dependencies",
+  ],
+  "packageRules": [
+    {
+      // Grouping Kotlin and Compose Compiler
+      "matchPackagePrefixes": [
+        "org.jetbrains.kotlin:",
+        "androidx.compose.compiler:",
+      ],
+      "groupName": "Kotlin and Compose Compiler",
+    },
+  ]
+}
