@@ -14,7 +14,7 @@ kotlin {
         publishLibraryVariants("release")
     }
     iosArm64()
-    iosX64()
+//    iosX64()
     iosSimulatorArm64()
 
     explicitApi()
@@ -25,6 +25,14 @@ kotlin {
                 implementation(compose.ui)
             }
         }
+//        val iosArm64 by creating
+//        val iosX64 by creating
+//        val iosSimulatorArm64 by creating
+//        iosMain {
+//            dependsOn(iosArm64)
+//            dependsOn(iosX64)
+//            dependsOn(iosSimulatorArm64)
+//        }
     }
 }
 
