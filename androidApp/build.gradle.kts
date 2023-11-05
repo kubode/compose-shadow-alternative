@@ -1,27 +1,19 @@
 plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.application)
-}
-
-kotlin {
-    jvmToolchain(19)
+    id("com.github.kubode.compose.shadow.kotlin.common")
+    id("com.github.kubode.compose.shadow.android.common")
+    id("com.github.kubode.compose.shadow.android.compose")
 }
 
 android {
     namespace = "com.github.kubode.compose.shadow.android"
-    compileSdk = 34
     defaultConfig {
         applicationId = "com.github.kubode.compose.shadow.android"
-        minSdk = 26
+        minSdk = 26 // Adaptive icon requires API 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-    }
-    buildFeatures {
-        compose = true
-        composeOptions {
-            kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
-        }
     }
 }
 

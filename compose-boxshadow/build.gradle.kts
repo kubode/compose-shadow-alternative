@@ -2,11 +2,12 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.android.library)
+    id("com.github.kubode.compose.shadow.kotlin.common")
+    id("com.github.kubode.compose.shadow.compose.multiplatform")
+    id("com.github.kubode.compose.shadow.android.common")
 }
 
 kotlin {
-    jvmToolchain(19)
-
     jvm()
     androidTarget {
         publishLibraryVariants("release")
@@ -28,8 +29,4 @@ kotlin {
 
 android {
     namespace = "com.github.kubode.compose.boxshadow"
-    compileSdk = 34
-    defaultConfig {
-        minSdk = 21
-    }
 }
