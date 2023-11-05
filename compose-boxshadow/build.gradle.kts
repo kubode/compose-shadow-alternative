@@ -8,7 +8,9 @@ kotlin {
     jvmToolchain(19)
 
     jvm()
-    androidTarget()
+    androidTarget {
+        publishLibraryVariants("release")
+    }
     iosArm64()
     iosX64()
     iosSimulatorArm64()
