@@ -4,6 +4,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 local.properties
+kotlin-js-store/
 
 ### IntelliJ IDEA ###
 .idea
