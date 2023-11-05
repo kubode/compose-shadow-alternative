@@ -1,4 +1,7 @@
 plugins {
+    id("com.github.kubode.compose.shadow.kotlin.common")
+    id("com.github.kubode.compose.shadow.android.common")
+    id("com.github.kubode.compose.shadow.android.compose")
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.library)
 }

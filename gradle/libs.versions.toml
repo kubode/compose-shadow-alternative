@@ -8,6 +8,9 @@ androidx-compose-ui = "1.6.0-alpha08"
 androidx-activity = "1.8.0"
 
 [libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-multiplatform-gradle-plugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-multiplatform" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "androidx-compose-compiler" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "androidx-compose-foundation" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose-ui" }
