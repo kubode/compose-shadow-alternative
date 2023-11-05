@@ -16,6 +16,8 @@ kotlin {
     iosArm64()
     iosX64()
     iosSimulatorArm64()
+    macosArm64()
+    macosX64()
     js {
         browser()
     }
@@ -28,6 +30,18 @@ kotlin {
                 implementation(compose.ui)
             }
         }
+        val nonAndroidMain by creating {
+            dependsOn(commonMain.get())
+        }
+        listOf(
+            jvmMain.get(),
+            getByName("iosArm64Main"),
+            getByName("iosX64Main"),
+            getByName("iosSimulatorArm64Main"),
+            getByName("macosArm64Main"),
+            getByName("macosX64Main"),
+            jsMain.get(),
+        ).forEach { it.dependsOn(nonAndroidMain) }
     }
 }
 
