@@ -9,13 +9,6 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
-        // TODO: Awaiting Compiler 1.5.4
-        maven {
-            url = uri("https://androidx.dev/storage/compose-compiler/repository")
-            mavenContent {
-                includeGroup("androidx.compose.compiler")
-            }
-        }
         google()
         mavenCentral()
     }
