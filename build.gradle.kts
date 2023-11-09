@@ -7,6 +7,6 @@ plugins {
 }
 
 allprojects {
-    group = "com.github.kubode"
+    group = "io.github.kubode.compose.shadow"
     version = "0.0.1-SNAPSHOT"
 }

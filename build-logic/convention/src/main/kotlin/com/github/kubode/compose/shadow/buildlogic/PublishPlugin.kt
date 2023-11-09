@@ -49,9 +49,9 @@ private fun Project.apply() {
         repositories {
             maven {
                 val releasesRepoUrl =
-                    uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+                    uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
                 val snapshotsRepoUrl =
-                    uri("https://oss.sonatype.org/content/repositories/snapshots/")
+                    uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
                 val ossrhUsername: String by project
                 val ossrhPassword: String by project
 
