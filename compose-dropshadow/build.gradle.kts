@@ -23,8 +23,10 @@ android {
 
 publishing {
     publications {
-        register<MavenPublication>("maven") {
-            components.matching { name == "release" }.all { from(this) }
+        getByName<MavenPublication>("maven") {
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
