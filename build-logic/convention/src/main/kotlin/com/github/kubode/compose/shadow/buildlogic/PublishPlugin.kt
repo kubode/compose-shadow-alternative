@@ -52,8 +52,8 @@ private fun Project.apply() {
                     uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
                 val snapshotsRepoUrl =
                     uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-                val ossrhUsername: String by project
-                val ossrhPassword: String by project
+                val ossrhUsername: String? by project
+                val ossrhPassword: String? by project
 
                 url = if (version.toString().endsWith("SNAPSHOT")) {
                     snapshotsRepoUrl
@@ -70,6 +70,10 @@ private fun Project.apply() {
     }
 
     extensions.configure<SigningExtension> {
+        val signingKeyId: String? by project
+        val signingKey: String? by project
+        val signingPassword: String? by project
+        useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
         sign(publishing.publications)
     }
 }
