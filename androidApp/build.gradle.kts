@@ -1,15 +1,15 @@
 plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.application)
-    id("com.github.kubode.compose.shadow.kotlin.common")
-    id("com.github.kubode.compose.shadow.android.common")
-    id("com.github.kubode.compose.shadow.android.compose")
+    id("io.github.kubode.compose.shadow.kotlin.common")
+    id("io.github.kubode.compose.shadow.android.common")
+    id("io.github.kubode.compose.shadow.android.compose")
 }
 
 android {
-    namespace = "com.github.kubode.compose.shadow.android"
+    namespace = "io.github.kubode.compose.shadow.android"
     defaultConfig {
-        applicationId = "com.github.kubode.compose.shadow.android"
+        applicationId = "io.github.kubode.compose.shadow.android"
         minSdk = 26 // Adaptive icon requires API 26
         targetSdk = 34
         versionCode = 1

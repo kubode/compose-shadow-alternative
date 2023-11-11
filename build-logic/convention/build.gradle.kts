@@ -5,24 +5,24 @@ plugins {
 gradlePlugin {
     plugins {
         register("kotlinCommon") {
-            id = "com.github.kubode.compose.shadow.kotlin.common"
+            id = "io.github.kubode.compose.shadow.kotlin.common"
             implementationClass =
-                "com.github.kubode.compose.shadow.buildlogic.KotlinCommonPlugin"
+                "io.github.kubode.compose.shadow.buildlogic.KotlinCommonPlugin"
         }
         register("composeMultiplatform") {
-            id = "com.github.kubode.compose.shadow.compose.multiplatform"
+            id = "io.github.kubode.compose.shadow.compose.multiplatform"
             implementationClass =
-                "com.github.kubode.compose.shadow.buildlogic.ComposeMultiplatformPlugin"
+                "io.github.kubode.compose.shadow.buildlogic.ComposeMultiplatformPlugin"
         }
         register("androidCommon") {
-            id = "com.github.kubode.compose.shadow.android.common"
+            id = "io.github.kubode.compose.shadow.android.common"
             implementationClass =
-                "com.github.kubode.compose.shadow.buildlogic.AndroidCommonPlugin"
+                "io.github.kubode.compose.shadow.buildlogic.AndroidCommonPlugin"
         }
         register("androidCompose") {
-            id = "com.github.kubode.compose.shadow.android.compose"
+            id = "io.github.kubode.compose.shadow.android.compose"
             implementationClass =
-                "com.github.kubode.compose.shadow.buildlogic.AndroidComposePlugin"
+                "io.github.kubode.compose.shadow.buildlogic.AndroidComposePlugin"
         }
     }
 }

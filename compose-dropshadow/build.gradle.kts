@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.library)
     alias(libs.plugins.maven.publish)
-    id("com.github.kubode.compose.shadow.kotlin.common")
-    id("com.github.kubode.compose.shadow.android.common")
-    id("com.github.kubode.compose.shadow.android.compose")
+    id("io.github.kubode.compose.shadow.kotlin.common")
+    id("io.github.kubode.compose.shadow.android.common")
+    id("io.github.kubode.compose.shadow.android.compose")
 }
 
 kotlin {
@@ -12,7 +12,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.github.kubode.compose.dropshadow"
+    namespace = "io.github.kubode.compose.dropshadow"
 }
 
 dependencies {
