@@ -5,7 +5,7 @@ plugins {
     id("com.github.kubode.compose.shadow.kotlin.common")
     id("com.github.kubode.compose.shadow.compose.multiplatform")
     id("com.github.kubode.compose.shadow.android.common")
-    id("com.github.kubode.compose.shadow.publish")
+    alias(libs.plugins.maven.publish)
 }
 
 kotlin {

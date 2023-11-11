@@ -24,11 +24,6 @@ gradlePlugin {
             implementationClass =
                 "com.github.kubode.compose.shadow.buildlogic.AndroidComposePlugin"
         }
-        register("publish") {
-            id = "com.github.kubode.compose.shadow.publish"
-            implementationClass =
-                "com.github.kubode.compose.shadow.buildlogic.PublishPlugin"
-        }
     }
 }
 
