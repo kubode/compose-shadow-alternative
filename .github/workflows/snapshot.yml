@@ -1,4 +1,4 @@
-name: Staging
+name: Publish snapshot
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  staging:
+  snapshot:
     runs-on: macos-latest
 
     steps:
