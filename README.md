@@ -1,7 +1,7 @@
 ![title](./docs/images/title.png)
 
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.kubode.compose.shadow/compose-boxshadow)
-https://img.shields.io/github/license/kubode/compose-shadow-alternative
+![GitHub](https://img.shields.io/github/license/kubode/compose-shadow-alternative)
 
 Compose has few ways to add shadows.
 This library provides box shadows and drop shadows to enrich shadow expression of Compose.
