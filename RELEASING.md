@@ -31,7 +31,7 @@
 7. Push changes.
 
    ```shell
-   $ git push && git push --tags
+   $ git push
    ```
 
    This will trigger a GitHub Action to publish the library to Maven Central.

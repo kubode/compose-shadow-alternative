@@ -13,7 +13,7 @@ update_version() {
 
 # Function to confirm with the user
 confirm() {
-    echo "You are about to set version to: $1"
+    echo "You are about to release $1 and preparing $2"
     read -p "Confirm (Y/N): " choice
     case "$choice" in
         Y|y ) echo "Proceeding with version $1";;
@@ -28,8 +28,8 @@ echo "Release Script"
 read -p "Enter the release version (e.g., 1.0.0): " release_version
 read -p "Enter the next snapshot version (e.g., 1.1.0-SNAPSHOT): " next_version
 
-# Confirm release version
-confirm $release_version
+# Confirm versions
+confirm $release_version $next_version
 
 # Update to release version
 update_version $release_version
@@ -41,15 +41,12 @@ echo "Tagged version $release_version"
 git push --tags
 echo "Pushed tags to remote"
 
-# Confirm next snapshot version
-confirm $next_version
-
 # Update to next snapshot version
 update_version $next_version
 echo "Updated version to $next_version in gradle.properties"
 git commit -am "Prepare next development version"
 echo "Committed changes for next development version"
-git push && git push --tags
+git push
 echo "Pushed changes and tags to remote"
 
 echo "Release process completed."
