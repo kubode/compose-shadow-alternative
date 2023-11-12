@@ -7,9 +7,11 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Phone
@@ -56,15 +58,14 @@ internal actual fun ColumnScope.DropShadowSample() {
         )
     }
     DropShadow(
-        color = DroidColor.copy(alpha = 0.5f),
+        color = Color.Black,
         offset = DpOffset(4.dp, 4.dp),
         radius = 8.dp,
     ) {
-        Image(
-            imageVector = Icons.Outlined.Phone,
-            contentDescription = null,
-            modifier = Modifier.size(48.dp),
-            colorFilter = ColorFilter.tint(DroidColor),
+        Box(
+            modifier = Modifier
+                .size(48.dp)
+                .border(4.dp, Color.Black, RoundedCornerShape(8.dp)),
         )
     }
     val infiniteTransition = rememberInfiniteTransition(label = "infinite")

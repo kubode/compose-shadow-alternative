@@ -1,6 +1,7 @@
 package io.github.kubode.compose.dropshadow
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
@@ -20,7 +21,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.drawscope.draw
-import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.layout.onPlaced
 import androidx.compose.ui.platform.LocalDensity
@@ -148,6 +148,10 @@ private fun DropShadowEffect(
                 width = with(density) { bitmap.width.toDp() },
                 height = with(density) { bitmap.height.toDp() },
             )
+            .offset(
+                x = offset.x,
+                y = offset.y,
+            )
             .blur(
                 radius = radius,
                 edgeTreatment = edgeTreatment,
@@ -155,15 +159,10 @@ private fun DropShadowEffect(
     ) {
         debug { "Draw - shadow" }
         drawInvalidationTrigger()
-        translate(
-            left = with(density) { offset.x.toPx() },
-            top = with(density) { offset.y.toPx() },
-        ) {
-            drawImage(
-                image = bitmap,
-                colorFilter = colorFilter,
-            )
-        }
+        drawImage(
+            image = bitmap,
+            colorFilter = colorFilter,
+        )
     }
 }
 
