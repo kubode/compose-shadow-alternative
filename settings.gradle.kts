@@ -25,3 +25,4 @@ rootProject.name = "compose-shadow-alternative"
 include(":compose-boxshadow")
 include(":compose-dropshadow")
 include(":sample:androidApp")
+include(":sample:shared")

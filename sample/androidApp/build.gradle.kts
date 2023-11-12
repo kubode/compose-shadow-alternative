@@ -18,8 +18,7 @@ android {
 }
 
 dependencies {
-    implementation(projects.composeBoxshadow)
-    implementation(projects.composeDropshadow)
+    implementation(projects.sample.shared)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.ui.tooling)
