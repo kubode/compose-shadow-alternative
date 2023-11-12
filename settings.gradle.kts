@@ -22,6 +22,6 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "compose-shadow-alternative"
 
-include(":androidApp")
 include(":compose-boxshadow")
 include(":compose-dropshadow")
+include(":sample:androidApp")

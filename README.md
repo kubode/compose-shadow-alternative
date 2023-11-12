@@ -30,7 +30,7 @@ dependencies {
 
 # Usage
 
-Samples are available in [androidApp](./androidApp).
+Samples are available in [sample](sample).
 
 ## DropShadow
 
