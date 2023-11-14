@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -86,7 +85,6 @@ public fun DropShadow(
     }
 }
 
-@Stable
 private class DropShadowState {
     var size: IntSize by mutableStateOf(IntSize.Zero)
         private set
