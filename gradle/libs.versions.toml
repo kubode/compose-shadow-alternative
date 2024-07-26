@@ -6,7 +6,7 @@ androidx-compose-compiler = "1.5.10"
 androidx-compose-foundation = "1.6.3"
 androidx-compose-ui = "1.6.2"
 androidx-compose-runtime = "1.0.0-beta01"
-androidx-activity = "1.8.2"
+androidx-activity = "1.9.1"
 maven-publish = "0.27.0"
 
 [libraries]
