@@ -14,7 +14,7 @@ repositories {
     mavenCentral()
     // If you want to use the latest snapshot version.
     maven {
-        url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
+        url = uri("https://central.sonatype.com/repository/maven-snapshots/")
         mavenContent {
             snapshotsOnly()
             includeGroup("io.github.kubode.compose.shadow")
